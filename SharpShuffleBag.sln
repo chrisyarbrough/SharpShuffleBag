@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpShuffleBag", "SharpShuffleBag\SharpShuffleBag.csproj", "{54198976-246F-4009-9079-7758DE76FA0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpShuffleBag.Tests", "SharpShuffleBag.Tests\SharpShuffleBag.Tests.csproj", "{506D8960-BADA-46D1-B541-7C037CBD522C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpShuffleBag.Samples", "SharpShuffleBag.Samples\SharpShuffleBag.Samples.csproj", "{5C29DB1C-EA59-407A-B1AA-3CAAB463A450}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Any CPU = Default|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54198976-246F-4009-9079-7758DE76FA0F}.Default|Any CPU.ActiveCfg = Default|Any CPU
+		{54198976-246F-4009-9079-7758DE76FA0F}.Default|Any CPU.Build.0 = Default|Any CPU
+		{506D8960-BADA-46D1-B541-7C037CBD522C}.Default|Any CPU.ActiveCfg = Default|Any CPU
+		{506D8960-BADA-46D1-B541-7C037CBD522C}.Default|Any CPU.Build.0 = Default|Any CPU
+		{5C29DB1C-EA59-407A-B1AA-3CAAB463A450}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C29DB1C-EA59-407A-B1AA-3CAAB463A450}.Default|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+EndGlobal

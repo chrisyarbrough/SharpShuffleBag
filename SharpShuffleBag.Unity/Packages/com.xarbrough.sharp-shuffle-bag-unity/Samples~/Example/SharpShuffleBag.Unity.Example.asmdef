@@ -1,0 +1,16 @@
+{
+    "name": "SharpShuffleBag.Unity.Example",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b95e16bcca2954fa6bdf163948caabc9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

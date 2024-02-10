@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputPath>bin</OutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<DebugType>embedded</DebugType>
+		<Optimize>true</Optimize>
+		<Deterministic>true</Deterministic>
+	</PropertyGroup>
+
+</Project>

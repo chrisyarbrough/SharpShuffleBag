@@ -1,0 +1,59 @@
+<Project>
+
+	<Import Project="../SharedBuildProperties.props"/>
+
+	<PropertyGroup>
+		<PackageId>com.xarbrough.sharp-shuffle-bag</PackageId>
+		<PackageVersion>1.0.0-pre.1</PackageVersion>
+		<Authors>Chris Yarbrough</Authors>
+		<RepositoryUrl>https://github.com/chrisyarbrough/SharpShuffleBag.git</RepositoryUrl>
+		<PackageTags>shuffle bag random</PackageTags>
+		<Description>A simple and efficient shuffle bag implementation for .NET.</Description>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Title>Sharp Shuffle Bag</Title>
+		<PackageProjectUrl>https://github.com/chrisyarbrough/SharpShuffleBag</PackageProjectUrl>
+		<RepositoryType>git</RepositoryType>
+		<!-- Paths relative to the root of the package. -->
+		<PackageIcon>ShuffleBagIcon.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="ShuffleBagIcon.png" Pack="true" PackagePath="\"/>
+		<None Include="$(SolutionDir)/README.md" Pack="true" PackagePath="\"/>
+	</ItemGroup>
+
+	<Target Name="CopyFilesToUnity" AfterTargets="Build">
+		<PropertyGroup>
+			<UnityPackagePath>$(SolutionDir)/SharpShuffleBag.Unity/Packages/com.xarbrough.sharp-shuffle-bag-unity</UnityPackagePath>
+		</PropertyGroup>
+		<Copy SourceFiles="$(SolutionDir)/README.md" DestinationFolder="$(UnityPackagePath)"/>
+		<ItemGroup>
+			<CSFiles Include="$(ProjectDir)/*.cs"/>
+		</ItemGroup>
+		<Copy SourceFiles="@(CSFiles)" DestinationFolder="$(UnityPackagePath)/Core" OverwriteReadOnlyFiles="true"/>
+		<!-- After copying the files to Unity, set them readonly as a reminder that copies shouldn't be edited. -->
+		<SetFilesReadonly FolderPath="$(UnityPackagePath)/Core"/>
+	</Target>
+
+	<UsingTask
+		TaskName="SetFilesReadonly"
+		TaskFactory="RoslynCodeTaskFactory"
+		AssemblyFile="$(MSBuildToolsPath)/Microsoft.Build.Tasks.Core.dll">
+		<ParameterGroup>
+			<FolderPath ParameterType="System.String" Required="true"/>
+		</ParameterGroup>
+		<Task>
+			<Using Namespace="System.IO"/>
+			<Code Type="Fragment" Language="cs">
+				<![CDATA[
+					foreach (var file in Directory.GetFiles(FolderPath, "*", SearchOption.AllDirectories))
+					{
+						File.SetAttributes(file, File.GetAttributes(file) | FileAttributes.ReadOnly);
+					}
+				]]>
+			</Code>
+		</Task>
+	</UsingTask>
+
+</Project>

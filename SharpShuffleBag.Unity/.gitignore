@@ -1,0 +1,13 @@
+.idea
+
+/Library
+/Logs
+/obj
+/UserSettings
+/Temp
+
+/Assets/Samples
+/Assets/Samples.meta
+
+*.csproj
+*.sln
