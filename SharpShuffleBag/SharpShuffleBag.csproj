@@ -13,6 +13,7 @@
 		<Title>Sharp Shuffle Bag</Title>
 		<PackageProjectUrl>https://github.com/chrisyarbrough/SharpShuffleBag</PackageProjectUrl>
 		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<!-- Paths relative to the root of the package. -->
 		<PackageIcon>ShuffleBagIcon.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
