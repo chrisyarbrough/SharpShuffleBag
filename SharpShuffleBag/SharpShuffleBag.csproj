@@ -3,15 +3,14 @@
 	<Import Project="../SharedBuildProperties.props"/>
 
 	<PropertyGroup>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageId>com.xarbrough.sharp-shuffle-bag</PackageId>
-		<PackageVersion>1.0.0-pre.1</PackageVersion>
+		<PackageVersion>1.0.0-pre.2</PackageVersion>
+		<Title>Sharp Shuffle Bag</Title>
+		<PackageTags>shuffle bag random</PackageTags>
 		<Authors>Chris Yarbrough</Authors>
 		<PackageDescription>A simple and efficient shuffle bag implementation for .NET.</PackageDescription>
 		<RepositoryUrl>https://github.com/chrisyarbrough/SharpShuffleBag.git</RepositoryUrl>
-		<PackageTags>shuffle bag random</PackageTags>
-		<Description>A simple and efficient shuffle bag implementation for .NET.</Description>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Title>Sharp Shuffle Bag</Title>
 		<PackageProjectUrl>https://github.com/chrisyarbrough/SharpShuffleBag</PackageProjectUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -22,7 +21,8 @@
 
 	<ItemGroup>
 		<None Include="ShuffleBagIcon.png" Pack="true" PackagePath="\"/>
-		<None Include="$(SolutionDir)/README.md" Pack="true" PackagePath="\"/>
+		<None Include="$(SolutionDir)/README.md" Pack="true" PackagePath="\" Link="README.md"/>
+		<None Include="$(SolutionDir)/SharpShuffleBag.Unity/Packages/com.xarbrough.sharp-shuffle-bag-unity/package.json" Link="Unity/package.json"/>
 	</ItemGroup>
 
 	<Target Name="CopyFilesToUnity" AfterTargets="Build">

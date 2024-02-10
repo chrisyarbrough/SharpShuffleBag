@@ -2,8 +2,6 @@
 
 An efficient and convenient shuffle bag implementation in C# for .NET and Unity projects.
 
-![](SharpShuffleBag/ShuffleBagIcon.png)
-
 ## Usage
 
 ```csharp
