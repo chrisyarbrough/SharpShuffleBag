@@ -6,6 +6,7 @@
 		<PackageId>com.xarbrough.sharp-shuffle-bag</PackageId>
 		<PackageVersion>1.0.0-pre.1</PackageVersion>
 		<Authors>Chris Yarbrough</Authors>
+		<PackageDescription>A simple and efficient shuffle bag implementation for .NET.</PackageDescription>
 		<RepositoryUrl>https://github.com/chrisyarbrough/SharpShuffleBag.git</RepositoryUrl>
 		<PackageTags>shuffle bag random</PackageTags>
 		<Description>A simple and efficient shuffle bag implementation for .NET.</Description>
