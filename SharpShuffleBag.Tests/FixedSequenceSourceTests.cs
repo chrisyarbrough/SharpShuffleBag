@@ -1,6 +1,6 @@
 namespace SharpShuffleBag.Tests;
 
-public class FixedSequenceSourceTests
+public sealed class FixedSequenceSourceTests
 {
 	[Fact]
 	public void SmokeTest()

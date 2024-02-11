@@ -10,7 +10,7 @@ namespace SharpShuffleBag.Unity
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
 		private static void Initialize()
 		{
-			if (IRandomRangeSource.Default.GetType() != typeof(UnityRandomSource))
+			if (IRandomRangeSource.Default is UnityRandomSource)
 			{
 				IRandomRangeSource.Default = new UnityRandomSource();
 			}

@@ -1,4 +1,6 @@
-﻿namespace SharpShuffleBag
+﻿// ReSharper disable UnusedMember.Global
+
+namespace SharpShuffleBag
 {
 	using System;
 	using System.Collections;

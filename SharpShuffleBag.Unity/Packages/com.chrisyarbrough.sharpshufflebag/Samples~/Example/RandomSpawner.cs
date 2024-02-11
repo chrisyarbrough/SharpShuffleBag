@@ -21,19 +21,23 @@ namespace SharpShuffleBag.Unity.Samples
 		[SerializeField]
 		private float spawnInterval = 0.5f;
 
-		private ShuffleBag<FadingTextMesh> shuffleBag;
-
 		private IEnumerator Start()
 		{
 			Application.targetFrameRate = 60;
 
-			shuffleBag = new ShuffleBag<FadingTextMesh>(SpawnTexts());
+			ShuffleBag<FadingTextMesh> shuffleBag = new(SpawnTexts());
 
+			int i = 0;
 			while (Application.isPlaying)
 			{
 				yield return new WaitForSeconds(spawnInterval);
+
 				FadingTextMesh text = shuffleBag.Next();
 				text.StartFade();
+
+				if (i++ % shuffleBag.Size == 0)
+					Debug.Log("----");
+				Debug.Log(text.Text);
 			}
 		}
 

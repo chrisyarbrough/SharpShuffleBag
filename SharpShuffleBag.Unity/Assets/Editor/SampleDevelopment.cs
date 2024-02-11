@@ -22,8 +22,8 @@ namespace SharpShuffleBag.Unity.Editor
 			{
 				foreach (DirectoryInfo source in versionDirectory.EnumerateDirectories())
 				{
-					// Packages/com.xarbrough.sharp-shuffle-bag-unity/Samples~/Example1
-					// Packages/com.xarbrough.sharp-shuffle-bag-unity/Samples~/Example2
+					// Packages/com.chrisyarbrough.sharpshufflebag/Samples~/Example1
+					// Packages/com.chrisyarbrough.sharpshufflebag/Samples~/Example2
 					string dest = "Packages/com.chrisyarbrough.sharpshufflebag/Samples~/" + source.Name;
 					CopyDirectory(source, dest);
 				}
