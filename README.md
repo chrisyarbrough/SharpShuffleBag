@@ -57,3 +57,4 @@ and therefore avoids the larger performance spike of reshuffling/refilling the b
 - Efficient implementation: The underlying collection is not resized, instead,
   an index is used to perform the random selection.
 - Set a custom `RandomSource` for fine-grained control (e.g. to make the bag deterministic or set a seed).
+- `Shuffle.FisherYates(IList<T> list)` utility method to shuffle a list in-place.

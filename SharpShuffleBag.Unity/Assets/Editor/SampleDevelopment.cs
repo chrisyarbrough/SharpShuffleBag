@@ -24,7 +24,7 @@ namespace SharpShuffleBag.Unity.Editor
 				{
 					// Packages/com.xarbrough.sharp-shuffle-bag-unity/Samples~/Example1
 					// Packages/com.xarbrough.sharp-shuffle-bag-unity/Samples~/Example2
-					string dest = "Packages/com.xarbrough.sharp-shuffle-bag-unity/Samples~/" + source.Name;
+					string dest = "Packages/com.chrisyarbrough.sharpshufflebag/Samples~/" + source.Name;
 					CopyDirectory(source, dest);
 				}
 			}

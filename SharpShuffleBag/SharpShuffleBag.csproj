@@ -5,7 +5,7 @@
 	<PropertyGroup>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageId>SharpShuffleBag</PackageId>
-		<PackageVersion>1.0.0</PackageVersion>
+		<PackageVersion>1.0.1</PackageVersion>
 		<PackageTags>shuffle bag random</PackageTags>
 		<Authors>Chris Yarbrough</Authors>
 		<PackageDescription>A simple and efficient shuffle bag implementation for .NET.</PackageDescription>
@@ -21,14 +21,15 @@
 	<ItemGroup>
 		<None Include="ShuffleBagIcon.png" Pack="true" PackagePath="\"/>
 		<None Include="$(SolutionDir)/README.md" Pack="true" PackagePath="\" Link="README.md"/>
-		<None Include="$(SolutionDir)/SharpShuffleBag.Unity/Packages/com.xarbrough.sharp-shuffle-bag-unity/package.json" Link="Unity/package.json"/>
+		<None Include="$(SolutionDir)/SharpShuffleBag.Unity/Packages/com.chrisyarbrough.sharpshufflebag/package.json" Link="Unity/package.json"/>
 	</ItemGroup>
 
 	<Target Name="CopyFilesToUnity" AfterTargets="Build">
 		<PropertyGroup>
-			<UnityPackagePath>$(SolutionDir)/SharpShuffleBag.Unity/Packages/com.xarbrough.sharp-shuffle-bag-unity</UnityPackagePath>
+			<UnityPackagePath>$(SolutionDir)/SharpShuffleBag.Unity/Packages/com.chrisyarbrough.sharpshufflebag</UnityPackagePath>
 		</PropertyGroup>
 		<Copy SourceFiles="$(SolutionDir)/README.md" DestinationFolder="$(UnityPackagePath)"/>
+		<Copy SourceFiles="$(SolutionDir)/LICENSE.md" DestinationFolder="$(UnityPackagePath)"/>
 		<ItemGroup>
 			<CSFiles Include="$(ProjectDir)/*.cs"/>
 		</ItemGroup>
