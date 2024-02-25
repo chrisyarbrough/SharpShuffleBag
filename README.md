@@ -1,3 +1,6 @@
+![NuGet Version](https://img.shields.io/nuget/v/SharpShuffleBag)
+[![openupm](https://img.shields.io/npm/v/com.chrisyarbrough.sharpshufflebag?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.chrisyarbrough.sharpshufflebag/)
+
 # Sharp Shuffle Bag
 
 An efficient and convenient shuffle bag implementation in C# for .NET and Unity projects.
