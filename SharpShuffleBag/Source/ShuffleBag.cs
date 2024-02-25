@@ -133,7 +133,9 @@ namespace SharpShuffleBag
 			// When starting a new set, ensure that we do not pick the last
 			// item from the previous set to avoid a possible collision.
 			int max = cursor == 0 ? count - 1 : count;
+
 			int randomIndex = RandomSource.Range(cursor, max);
+			RandomSource.Verify(randomIndex, cursor, max);
 
 			// Swap the random pick with the cursor position,
 			// so that items below the cursor are not picked again within this set.

@@ -5,7 +5,7 @@
 	<PropertyGroup>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageId>SharpShuffleBag</PackageId>
-		<PackageVersion>1.0.1</PackageVersion>
+		<PackageVersion>1.0.2</PackageVersion>
 		<PackageTags>shuffle bag random</PackageTags>
 		<Authors>Chris Yarbrough</Authors>
 		<PackageDescription>A simple and efficient shuffle bag implementation for .NET.</PackageDescription>
@@ -31,7 +31,7 @@
 		<Copy SourceFiles="$(SolutionDir)/README.md" DestinationFolder="$(UnityPackagePath)"/>
 		<Copy SourceFiles="$(SolutionDir)/LICENSE.md" DestinationFolder="$(UnityPackagePath)"/>
 		<ItemGroup>
-			<CSFiles Include="$(ProjectDir)/*.cs"/>
+			<CSFiles Include="$(ProjectDir)/Source/*.cs"/>
 		</ItemGroup>
 		<Copy SourceFiles="@(CSFiles)" DestinationFolder="$(UnityPackagePath)/Core" OverwriteReadOnlyFiles="true"/>
 		<!-- After copying the files to Unity, set them readonly as a reminder that copies shouldn't be edited. -->
