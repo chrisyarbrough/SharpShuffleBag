@@ -31,3 +31,19 @@ For JetBrains Rider, see the `SharpShuffleBag.sln.DotSettings` file, for other I
 When in doubt, try to align with the existing code.
 
 Avoid reformatting existing code when contributing new features.
+
+## Release Process
+
+- Update the PackageVersion in SharpShuffleBag.csproj
+- Update version in package.json
+- Update Unity changelog
+
+```bash
+cd SharpShuffleBag/bin
+```
+
+```
+dotnet nuget push SharpShuffleBag.<version>.nupkg --api-key <your-key> --source https://api.nuget.org/v3/index.json
+```
+
+For testing: `--source https://apiint.nugettest.org/v3/index.json`
