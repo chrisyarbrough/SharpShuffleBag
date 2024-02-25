@@ -3,7 +3,6 @@ namespace SharpShuffleBag.Tests;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-using Xunit.Abstractions;
 
 public sealed class ShuffleBagTests
 {
@@ -248,5 +247,23 @@ public sealed class ShuffleBagTests
 
 		// Used items should not actually be removed from the internal collection.
 		bag.Size.Should().Be(3);
+	}
+
+	[Fact]
+	public void InvalidRandomSourceShouldThrow()
+	{
+		var bag = new ShuffleBag { 42 };
+		bag.RandomSource = new InvalidRandomSource();
+		Exception exception = Assert.Throws<ArgumentOutOfRangeException>(() => bag.Next());
+		testOutputHelper.WriteLine(exception.Message);
+	}
+
+	private class InvalidRandomSource : IRandomRangeSource
+	{
+		public int Range(int minInclusive, int maxExclusive)
+		{
+			// This violates the special case where minInclusive == maxExclusive, which should return minInclusive.
+			return maxExclusive - 1;
+		}
 	}
 }

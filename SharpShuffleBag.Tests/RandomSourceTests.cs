@@ -1,9 +1,9 @@
 namespace SharpShuffleBag.Tests;
 
-public sealed class FixedSequenceSourceTests
+public sealed class RandomSourceTests
 {
 	[Fact]
-	public void SanityCheck()
+	public void FixedSequenceSourceTest()
 	{
 		// A sanity check that our test implementation is correct.
 		var source = new FixedSequenceSource(3, 5, 7);

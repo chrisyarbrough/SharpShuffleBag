@@ -2,7 +2,7 @@
 
 The top-level SharpShuffleBag.sln is the main solution which includes projects for the core source, samples and tests.
 
-When building this solution (or the main SharpShuffleBag csproj), some files are automatically copied to the Unity
+When building this solution (or the main SharpShuffleBag csproj), the source files are automatically copied to the Unity
 project to distribute them as a Unity package. This was chosen to keep the build and publish flow simple, but
 remember to only make changes to the main source files and then let the build process copy them to Unity.
 

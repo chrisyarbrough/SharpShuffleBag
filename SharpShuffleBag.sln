@@ -6,6 +6,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpShuffleBag.Tests", "Sh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpShuffleBag.Samples", "SharpShuffleBag.Samples\SharpShuffleBag.Samples.csproj", "{5C29DB1C-EA59-407A-B1AA-3CAAB463A450}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{8C2195B7-87C8-4185-B251-ED5E0C00504A}"
+	ProjectSection(SolutionItems) = preProject
+		SourceDevelopment.md = SourceDevelopment.md
+		README.md = README.md
+		SharedBuildProperties.props = SharedBuildProperties.props
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Any CPU = Default|Any CPU
